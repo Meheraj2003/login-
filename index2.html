@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Css file link -->
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    
+
+    <form action="#" class="login-form" onsubmit="return value()">
+        <h1>Log-in</h1>
+        <div class="input-ariya">
+        <!-- First-name -->
+        <label for="name">User Name</label><br>
+        <input id="name" type="text" name="name" autocomplete="off" tabindex="1" /><br>
+        <span id="user-name"></span><br>
+
+        <!-- Password -->
+        <label for="password">Password</label><br>
+        <input id="password" type="password" name="password" autocomplete="off" tabindex="2" /><br>
+        <span id="pass"></span>
+            <br>
+        <!-- Submit button -->
+        <button type="submit">Submit</button>
+        </div>
+    </form>
+
+</body>
+
+<script>
+  
+  function value(){
+    let name = document.getElementById('name').value;
+    let password = document.getElementById('password').value;
+
+    // User name
+    // Enter Your User name
+    if(name == ""){
+        document.getElementById('user-name').innerHTML="**Please Enter you name"
+        return false;
+    }
+    // Need User name not number
+    if(!isNaN(name)){
+        document.getElementById('user-name').innerHTML="**Need word not number"
+        return false;
+    }
+
+    // User name limite
+ 
+    
+    // Password
+
+    // Password Input Chack
+    if(password == ""){
+        document.getElementById('pass').innerHTML="**Please Enter you password"
+        return false;
+    }
+
+    if(isNaN(password)){
+        document.getElementById('pass').innerHTML="**Need @#$%^"
+        return false;
+    }
+
+  }
+        
+</script>
+</html>
